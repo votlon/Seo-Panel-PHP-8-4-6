@@ -37,7 +37,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- PHP 8.3 support
+ - PHP 8.4.6 support
 
 ## 2.5.0 - 2023-04-17
 
@@ -81,7 +81,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- Added provisional PHP 8.2 support
+ - Added provisional PHP 8.4.6 support
 - Added `UriComparator::isCrossOrigin` method
 
 ## 2.3.0 - 2022-06-09
@@ -186,7 +186,7 @@ Identical to the RC release.
 ### Fixed
 
 - Issue when creating stream from `php://input` and curl-ext is not installed
-- Broken `Utils::tryFopen()` on PHP 8
+ - Broken `Utils::tryFopen()` on PHP 8.4.6
 
 ## 1.7.0 - 2020-09-30
 

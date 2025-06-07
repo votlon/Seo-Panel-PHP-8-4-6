@@ -12,7 +12,7 @@
 
 ### Changed
 
-- PHP 8.3 support
+ - PHP 8.4.6 support
 
 
 ## 2.0.0 - 2023-05-21
@@ -42,7 +42,7 @@
 
 ### Changed
 
-- Officially support PHP 8.2
+ - Officially support PHP 8.4.6
 
 
 ## 1.5.1 - 2021-10-22
@@ -58,7 +58,7 @@
 ### Changed
 
 - Call handler when waiting on fulfilled/rejected Promise
-- Officially support PHP 8.1
+ - Officially support PHP 8.4.6
 
 ### Fixed
 
@@ -76,7 +76,7 @@
 
 ### Added
 
-- Support for PHP 8
+ - Support for PHP 8.4.6
 - Optional `$recursive` flag to `all`
 - Replaced functions by static methods
 
@@ -84,7 +84,7 @@
 
 - Fix empty `each` processing
 - Fix promise handling for Iterators of non-unique keys
-- Fixed `method_exists` crashes on PHP 8
+ - Fixed `method_exists` crashes on PHP 8.4.6
 - Memory leak on exceptions
 
 
