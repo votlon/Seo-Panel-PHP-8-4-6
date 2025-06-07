@@ -32,8 +32,8 @@ $controller->set('spTextPlugin', $controller->spTextPlugin);
 // set site details according to customizer plugin
 $custSiteInfo = getCustomizerDetails();
 $siteName = !empty($custSiteInfo['site_name']) ? $custSiteInfo['site_name'] : "Seo Panel";
-$controller->set('spTitle', "$siteName: Provides latest seo plugins to increase and track the performace your website");
-$controller->set('spDescription', "Its an open source software and also you can develop your own seo plugins for $siteName. Download new seo plugins and install into your $siteName software and increase your site perfomance.");
+$controller->set('spTitle', "$siteName: Provides latest seo plugins to increase and track the performance your website");
+$controller->set('spDescription', "Its an open source software and also you can develop your own seo plugins for $siteName. Download new seo plugins and install into your $siteName software and increase your site performance.");
 $controller->set('spKeywords', "$siteName plugins,latest seo plugins,download seo plugins,install seo plugins,develop seo plugins");
 
 if($_SERVER['REQUEST_METHOD'] == 'POST'){

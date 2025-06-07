@@ -39,7 +39,7 @@ class APIController extends Controller {
 		$this->render('api/showapiconnect');
 	}
 	
-	// get api credentails of the system
+	// get api credentials of the system
 	function getAPICredentials() {
 		$apiCredInfo =  array();
 		$settingCtrler = new SettingsController();

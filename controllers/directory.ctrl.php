@@ -539,7 +539,7 @@ class DirectoryController extends Controller{
 		$this->render('directory/skippeddirs');	
 	}
 	
-	# func to show submision reports
+	# func to show submission reports
 	function showSubmissionReports($searchInfo=''){
 		
 		$userId = isLoggedIn();		

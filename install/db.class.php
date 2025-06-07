@@ -24,7 +24,7 @@
 class DB{
 
 	var $connectionId = false; 	# db connectio id
-	var $error = false;   		# error while databse operations
+	var $error = false;   		# error while database operations
 	
         function connectDatabase($dbServer, $dbUser, $dbPassword, $dbName){
                 $this->connectionId = @mysqli_connect($dbServer, $dbUser, $dbPassword, $dbName);

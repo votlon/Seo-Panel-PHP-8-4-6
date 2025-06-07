@@ -71,7 +71,7 @@ class ProxyController extends Controller{
 		$this->render('proxy/importproxy');
 	}
 	
-	#funvtion to import proxy
+	#function to import proxy
 	function importProxy($data = "") {
 		$errMsg['proxy_list'] = formatErrorMsg($this->validate->checkBlank($data['proxy_list']));
 		if(!$this->validate->flagErr){
