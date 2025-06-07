@@ -838,7 +838,7 @@ function createSelectBoxFromList($optList, $nameAtr, $selectedVal, $emptySelectL
         $selectStr .= "<option value='$optVal' $selected>$optLabel</option>";
     }
     
-    $selectStr .= "<select>";
+    $selectStr .= "</select>";
     return $selectStr;
 }
 
@@ -863,7 +863,7 @@ function createSelectBox($optList, $nameAtr, $selectedVal, $labelCol='name', $id
         $selectStr .= "<option value='$optVal' $selected>$optLabel</option>";
     }
     
-    $selectStr .= "<select>";
+    $selectStr .= "</select>";
     return $selectStr;
 }
 ?>
