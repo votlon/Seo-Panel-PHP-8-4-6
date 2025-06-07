@@ -26,56 +26,61 @@ class DB{
 	var $connectionId = false; 	# db connectio id
 	var $error = false;   		# error while databse operations
 	
-	function connectDatabase($dbServer, $dbUser, $dbPassword, $dbName){
-		$this->connectionId = @mysql_connect($dbServer, $dbUser, $dbPassword, true);
-		if (!$this->connectionId){
-			return $this->getError();
-		}
-		return $this->selectDatabase($dbName);
-	}
+        function connectDatabase($dbServer, $dbUser, $dbPassword, $dbName){
+                $this->connectionId = @mysqli_connect($dbServer, $dbUser, $dbPassword, $dbName);
+                if (!$this->connectionId){
+                        $this->error = true;
+                        return $this->getError();
+                }
 
-	# func to select database
-	function selectDatabase($dbName){
-		$res = @mysql_select_db($dbName, $this->connectionId);
-		if(@mysql_errno() != 0){			
-			return $this->getError();
-		}
-	}
+                return true;
+        }
 
-	# func to Execute a general mysql query
-	function query($query, $noRows=false){
-		$res = @mysql_query($query, $this->connectionId);
-		if (empty($res)){
-			return $this->getError();
-		}
-		return $res;
-	}
-	
+        # func to select database
+        function selectDatabase($dbName){
+                $res = @mysqli_select_db($this->connectionId, $dbName);
+                if(@mysqli_errno($this->connectionId) != 0){
+                        return $this->getError();
+                }
+        }
+
+        # func to Execute a general mysql query
+        function query($query, $noRows=false){
+                $res = @mysqli_query($this->connectionId, $query);
+                if (empty($res)){
+                        return $this->getError();
+                }
+                return $res;
+        }
+
     #func to execute a select query
-	function select($query, $fetchFirst = false){
-		$res = @mysql_query($query, $this->connectionId);
-		if (!$res){
-			return false;
-		}
-		$returnArr = array();
-		while ($row = mysql_fetch_assoc($res)){
-			$returnArr[] = $row;
-		}
-		mysql_free_result($res);
-		if ($fetchFirst){
-			return $returnArr[0];
-		}
-		return $returnArr;
-	}
+        function select($query, $fetchFirst = false){
+                $res = @mysqli_query($this->connectionId, $query);
+                if (!$res){
+                        return false;
+                }
+                $returnArr = array();
+                while ($row = mysqli_fetch_assoc($res)){
+                        $returnArr[] = $row;
+                }
+                mysqli_free_result($res);
+                if ($fetchFirst){
+                        return $returnArr[0];
+                }
+                return $returnArr;
+        }
 
-	# func to Display the Mysql error
-	function getError(){
-		if (@mysql_errno() != 0) {			
-			$this->error = true;
-			$error =  "Mysql Error: " . @mysql_error();
-		}
-		return $error;
-	}
+        # func to Display the Mysql error
+        function getError(){
+                if (@mysqli_errno($this->connectionId) != 0) {
+                        $this->error = true;
+                        $error =  "Mysql Error: " . @mysqli_error($this->connectionId);
+                } else if (!$this->connectionId) {
+                        $this->error = true;
+                        $error =  "Mysql Error: " . mysqli_connect_error();
+                }
+                return $error;
+        }
 	
 	function importDatabaseFile($filename, $block=true){
 		

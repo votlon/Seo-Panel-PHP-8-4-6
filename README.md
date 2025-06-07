@@ -4,7 +4,7 @@ An Award Winning open source seo control panel for managing search engine optimi
 
 ## Requirements
 
-   1. PHP, MYSQL, Web Server(e.g APACHE)
+   1. PHP 8.0 or later, MYSQL, Web Server(e.g APACHE)
 
    2. CURL enabled with PHP, Refer following link to install curl with php if it is not installed.
 
