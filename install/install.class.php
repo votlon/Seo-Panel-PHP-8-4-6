@@ -27,11 +27,11 @@ class Install {
 		
 		$phpClass = "red";
 		$phpSupport = "No";
-		$phpVersion = phpversion();
-                if (intval($phpVersion) >= 8) {
-                        $phpClass = "green";
-                        $phpSupport = "Yes";
-                }
+               $phpVersion = phpversion();
+               if (version_compare($phpVersion, '8.4.6', '>=')) {
+                       $phpClass = "green";
+                       $phpSupport = "Yes";
+               }
                 $phpSupport .= " ( PHP $phpVersion )";
 		
 		$mysqlClass = "red";
@@ -107,7 +107,7 @@ class Install {
 			<tr><th colspan="2" class="header">Installation compatibility</th></tr>
 			<tr><td colspan="2" class="error"><?php echo $errMsg;?></td></tr>
 			<tr>
-                                <th>PHP version >= 8.0.0</th>
+                               <th>PHP version >= 8.4.6</th>
 				<td class="<?php echo $phpClass;?>"><?php echo $phpSupport;?></td>
 			</tr>
 			<tr>
@@ -403,11 +403,11 @@ class Install {
 
 		$phpClass = "red";
 		$phpSupport = "No";
-		$phpVersion = phpversion();
-		if (intval($phpVersion) >= 5) {			
-			$phpClass = "green";
-			$phpSupport = "Yes";
-		}
+               $phpVersion = phpversion();
+               if (version_compare($phpVersion, '8.4.6', '>=')) {
+                       $phpClass = "green";
+                       $phpSupport = "Yes";
+               }
 		$phpSupport .= " ( PHP $phpVersion )";
 		
 		$mysqlClass = "red";
@@ -494,7 +494,7 @@ class Install {
 			<tr><th colspan="2" class="header">Upgrade compatibility</th></tr>
 			<tr><td colspan="2" class="error"><?php echo $errMsg;?></td></tr>
 			<tr>
-                                <th>PHP version >= 8.0.0</th>
+                               <th>PHP version >= 8.4.6</th>
 				<td class="<?php echo $phpClass;?>"><?php echo $phpSupport;?></td>
 			</tr>
 			<tr>
