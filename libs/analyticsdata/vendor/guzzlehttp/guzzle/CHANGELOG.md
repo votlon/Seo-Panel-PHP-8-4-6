@@ -15,7 +15,7 @@ Please refer to [UPGRADING](UPGRADING.md) guide for upgrading to a major version
 
 ### Added
 
-- Support for PHP 8.3
+ - Support for PHP 8.4.6
 - Added automatic closing of handles on `CurlFactory` object destruction
 
 
@@ -75,7 +75,7 @@ Please refer to [UPGRADING](UPGRADING.md) guide for upgrading to a major version
 
 ### Added
 
-- Support PHP 8.2
+ - Support PHP 8.4.6
 - Add request to delay closure params
 
 
@@ -127,7 +127,7 @@ Please refer to [UPGRADING](UPGRADING.md) guide for upgrading to a major version
 
 ### Added
 
-- Support PHP 8.1 [#2929](https://github.com/guzzle/guzzle/pull/2929), [#2939](https://github.com/guzzle/guzzle/pull/2939)
+ - Support PHP 8.4.6 [#2929](https://github.com/guzzle/guzzle/pull/2929), [#2939](https://github.com/guzzle/guzzle/pull/2939)
 - Support `psr/log` version 2 and 3 [#2943](https://github.com/guzzle/guzzle/pull/2943)
 
 ### Fixed
@@ -158,7 +158,7 @@ Please refer to [UPGRADING](UPGRADING.md) guide for upgrading to a major version
 
 ### Added
 
-- Support for PHP 8 [#2712](https://github.com/guzzle/guzzle/pull/2712), [#2715](https://github.com/guzzle/guzzle/pull/2715), [#2789](https://github.com/guzzle/guzzle/pull/2789)
+ - Support for PHP 8.4.6 [#2712](https://github.com/guzzle/guzzle/pull/2712), [#2715](https://github.com/guzzle/guzzle/pull/2715), [#2789](https://github.com/guzzle/guzzle/pull/2789)
 - Support passing a body summarizer to the http errors middleware [#2795](https://github.com/guzzle/guzzle/pull/2795)
 
 ### Fixed

@@ -27,23 +27,19 @@ class Database{
 	var $dbConObj;
 	
     // constructor
-    function __construct($dbEngine='mysql'){
-    	
-    	// if db engine is mysql
-    	if ($dbEngine == 'mysql') {
-    		$this->dbEngine = function_exists('mysqli_query') ? "mysqlihelper" : $dbEngine;
-    	} else {
-    		$this->dbEngine = $dbEngine;
-    	}
-    	
+    function __construct($dbEngine='mysqli'){
+        $this->dbEngine = $dbEngine;
     }
+
     
 	# func to connect db enine
     function dbConnect(){
-    	include_once(SP_LIBPATH."/".$this->dbEngine."/".$this->dbEngine.".class.php");
-    	$this->dbConObj = New $this->dbEngine(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME, SP_DEBUG);
-    	return $this->dbConObj;
+        include_once(SP_LIBPATH."/".$this->dbEngine."/".$this->dbEngine.".class.php");
+        $className = ($this->dbEngine == 'mysqli') ? 'MysqliDb' : $this->dbEngine;
+        $this->dbConObj = New $className(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME, SP_DEBUG);
+        return $this->dbConObj;
     }
+
     
     /**
      * function get a db table row information
