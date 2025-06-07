@@ -98,7 +98,7 @@ class SeoPluginsController extends Controller{
 		}
 	}
 	
-	# function to get plugin view path, chekc for theme exists or not
+	# function to get plugin view path, check for theme exists or not
 	function getPluginViewPath($pluginPath) {
 		$pluginViewPath = $pluginPath."/views";
 		

@@ -30,7 +30,7 @@ $controller->view->menu = 'login';
 $custSiteInfo = getCustomizerDetails();
 $siteName = !empty($custSiteInfo['site_name']) ? $custSiteInfo['site_name'] : "Seo Panel";
 $controller->set('spTitle', "$siteName: Login section");
-$controller->set('spDescription', "Login to $siteName and utilise seo tools and plugins to increase the perfomance of your site.");
+$controller->set('spDescription', "Login to $siteName and utilise seo tools and plugins to increase the performance of your site.");
 $controller->set('spKeywords', "$siteName Login section");
 
 if($_SERVER['REQUEST_METHOD'] == 'POST'){

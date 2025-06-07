@@ -29,7 +29,7 @@ error_reporting(0);
 
 $install = New Install();
 
-# installation configiration
+# installation configuration
 define("SP_INSTALL_DIR", getcwd());
 define("SP_CONFIG_FILE", "config/sp-config.php");
 define("SP_CONFIG_FILE_EXTRA", "config/sp-config-extra.php");

@@ -90,7 +90,7 @@ class KeywordAPI extends Seopanel{
 	 * 		$info['id']  		The id of the keyword	- Mandatory
 	 * 		$info['from_time']  	The from time of report in (yyyy-mm-dd) Eg: 2014-12-24	- Optional - (default => Yesterday)
 	 * 		$info['to_time']  		The to time of report in (yyyy-mm-dd) Eg: 2014-12-28	- Optional - (default => Today)
-	 * @return Array $returnInfo  	Contains informations about keyword reports
+	 * @return Array $returnInfo  	Contains information about keyword reports
 	 */
 	function getReportById($info) {
 		
@@ -118,7 +118,7 @@ class KeywordAPI extends Seopanel{
 	 * 		$info['id']  			The id of the website	- Mandatory
 	 * 		$info['from_time']  	The from time of report in (yyyy-mm-dd) Eg: 2014-12-24	- Optional - (default => Yesterday)
 	 * 		$info['to_time']  		The to time of report in (yyyy-mm-dd) Eg: 2014-12-28	- Optional - (default => Today)
-	 * @return Array $returnInfo  	Contains informations about keyword reports
+	 * @return Array $returnInfo  	Contains information about keyword reports
 	 */
 	function getReportByWebsiteId($info) {
 		
@@ -159,7 +159,7 @@ class KeywordAPI extends Seopanel{
 	 * 		$info['id']  			The id of the user	- Mandatory
 	 * 		$info['from_time']  	The from time of report in (yyyy-mm-dd) Eg: 2014-12-24	- Optional - (default => Yesterday)
 	 * 		$info['to_time']  		The to time of report in (yyyy-mm-dd) Eg: 2014-12-28	- Optional - (default => Today)
-	 * @return Array $returnInfo  	Contains informations about keyword reports
+	 * @return Array $returnInfo  	Contains information about keyword reports
 	 */
 	function getReportByUserId($info) {
 		
@@ -207,7 +207,7 @@ class KeywordAPI extends Seopanel{
 	 * function to get keyword information
 	 * @param Array $info			The input details to process the api
 	 * 		$info['id']  		    The id of the keyword	- Mandatory
-	 * @return Array $returnInfo  	Contains informations about keyword
+	 * @return Array $returnInfo  	Contains information about keyword
 	 */
 	function getKeywordInfo($info) {
 		$keywordId = intval($info['id']);
@@ -233,7 +233,7 @@ class KeywordAPI extends Seopanel{
 	 * 		$info['id']  		    The id of the website	- Mandatory
 	 * 		$info['status']  		The status of the keyword
 	 * 		$info['search']  		The search keyword
-	 * @return Array $returnInfo  	Contains informations about keyword
+	 * @return Array $returnInfo  	Contains information about keyword
 	 */
 	function getWebsiteKeywords($info) {
 	    $websiteId = intval($info['id']);
