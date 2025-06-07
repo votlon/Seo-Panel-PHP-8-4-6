@@ -37,7 +37,7 @@ define('DB_PASSWORD', '');
 define('DB_HOST', 'localhost');
 
 # The name of the database engine for seo panel
-define('DB_ENGINE', 'mysql');
+define('DB_ENGINE', 'mysqli');
 
 # The version of seo panel installed
 define('SP_INSTALLED', '4.12.0');
